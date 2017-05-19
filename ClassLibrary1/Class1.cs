@@ -11,15 +11,8 @@ namespace AppDomainManagerTest
 	{
 		public override void InitializeNewDomain(AppDomainSetup appDomainInfo)
 		{
-			Console.WriteLine($"Initializing new AppDomain");
-			base.InitializeNewDomain(appDomainInfo);
-            appDomainInfo.AppDomainInitializer = new AppDomainInitializer(InitializeNewAppDomain);
-        }
-
-		public static void InitializeNewAppDomain(string[] args)
-		{
-            //Console.WriteLine("AppDomain id: " + AppDomain.CurrentDomain.Id);
-            //Console.WriteLine(string.Join(" ", args));
+            Console.WriteLine($"Initializing new AppDomain (running in: {AppDomain.CurrentDomain.Id})");
+            base.InitializeNewDomain(appDomainInfo);
         }
 	}
 }
