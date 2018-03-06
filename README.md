@@ -1,7 +1,7 @@
 # AppDomainManagerTest
 A test app for bugs I've encountered in the AppDomainManager/AppDomainInitializer
 
-From @marklio:
+From https://github.com/marklio:
 
 This appears to work fine if you don’t set AppDomainInitializer on the AppDomainSetup. I haven’t dug in to understand why. In any case, you don’t need this. InitializeNewDomain already happens in the new domain, so you can just do whatever you need there. If the manager looks like the following it works:
  
